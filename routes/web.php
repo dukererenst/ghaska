@@ -16,6 +16,7 @@
 Route::get('/', 'HomeController@index')->name('admin');
 Route::get('/about_us',array('as'=>'about_us', 'uses'=>'HomeController@aboutUs'));
 Route::get('/contact_us',array('as'=>'contact_us', 'uses'=>'HomeController@contactUs'));
+Route::get('/member_executives',array('as'=>'member_executives', 'uses'=>'HomeController@execustives'));
 Route::get('/blog_page',array('as'=>'blogs', 'uses'=>'HomeController@blogs'));
 Route::get('/admin', 'AdminDashBoardController@dashBoard')->name('admin')->middleware('adminAuth');
 

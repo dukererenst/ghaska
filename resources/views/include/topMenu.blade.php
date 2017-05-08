@@ -5,37 +5,37 @@
                         <li class='{{$about_active}}'><a href='{{route('about_us')}}'> About Us</a>
 
                         </li>
-                        <li class="dropdown "><a href="#" class="dropdown-toggle" data-toggle="dropdown"> Membership</a>
+                        <li class="dropdown {{$member_active}}"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> Membership</a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="aboutus.html">Executive</a>
+                                <li><a href='{{route('member_executives')}}'>Executive</a>
                                 </li>
-                                <li><a href="timeline.html">Regional Executive</a></li>
+                                <li><a href="#">Regional Executive</a></li>
 
-                                <li><a href="timeline.html">Members</a></li>
+                                <li><a href="#">Members</a></li>
 
                             </ul>
                         </li>
-                        <li class="dropdown "><a href="#" class="dropdown-toggle" data-toggle="dropdown"> Media</a>
+                        <li class="dropdown {{$member_active}}"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> Media</a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href='{{route('blogs')}}'>Blog</a>
                                 </li>
-                                <li><a href="single_product.html">Gallery</a>
+                                <li><a href="#">Gallery</a>
                                 </li>
-                                <li><a href="compareproducts.html">Compare Products</a>
+                                <li><a href="#">Video</a>
                                 </li>
-                                <li><a href="category.html">Categories</a></li>
+                                
                             </ul>
                         </li>
 
                         <li class="dropdown "><a href="#" class="dropdown-toggle" data-toggle="dropdown"> News &AMP; Events</a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="news.html">News</a>
+                                <li><a href="#">News</a>
                                 </li>
-                                <li><a href="news_item.html">News Item</a>
+                                <li><a href="#">News Item</a>
                                 </li>
                             </ul>
                         </li>
-                        <li ><a href="blog.html"> Ghana/Korea Experience</a>
+                        <li ><a href="#"> Ghana/Korea Experience</a>
                         </li>
 
                          <li class='{{$contact_active}}'><a href='{{route('contact_us')}}'>Contact</a>

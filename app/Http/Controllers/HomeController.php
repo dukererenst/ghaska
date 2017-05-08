@@ -27,12 +27,14 @@ class HomeController extends Controller
         return view('home')->with('blogs', $this->loadBlogs())
                 ->with('home_active', 'active')
                   ->with('contact_active', '')
+                ->with('member_active', '')
                 ->with('about_active', '');
     }
     public function aboutUs()
     {
         return view('frontend.about_us')
                 ->with('about_active', 'active')
+                ->with('member_active', '')
                  ->with('contact_active', '')
                  ->with('home_active', '');
     }
@@ -40,7 +42,16 @@ class HomeController extends Controller
     {
         return view('frontend.contact_us')
                 ->with('about_active', '')
+                 ->with('member_active', '')
                 ->with('contact_active', 'active')
+                 ->with('home_active', '');
+    }
+    public function execustives()
+    {
+        return view('frontend.excutives')
+                ->with('about_active', '')
+                ->with('member_active', 'active')
+                ->with('contact_active', '')
                  ->with('home_active', '');
     }
     public function blogs()

@@ -69,7 +69,7 @@ and open the template in the editor.
                         <span><a href="#">_<i class="livicon" data-name="responsive-menu" data-size="25" data-loop="true" data-c="#757b87" data-hc="#ccc"></i>
                             </a></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src='{{asset('public/img/ghaska-logo-small.png')}}' alt="logo" class="logo_position">
+                    <a class="navbar-brand"  href='{{route('home')}}'><img src='{{asset('public/img/ghaska-logo-small.png')}}' alt="logo" class="logo_position">
                     </a>
                 </div>
                 @include('include.topMenu')

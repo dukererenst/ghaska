@@ -6,7 +6,7 @@
     <div class="row">
         <div class="box animation flipInX">
             <div class="box1">
-                <img src='{{asset('img/ghaska.png')}}' alt="logo" class="img-responsive mar">
+                <img src='{{asset('public/img/ghaska.png')}}' alt="logo" class="img-responsive mar">
                 <h3 class="text-primary">Login</h3>
                 <!-- Notifications -->
 

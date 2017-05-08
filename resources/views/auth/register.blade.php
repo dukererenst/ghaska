@@ -5,7 +5,7 @@
     <!--Content Section Start -->
     <div class="row">
         <div class="box animation flipInX">
-          <img src='{{asset('img/ghaska.png')}}' alt="logo" class="img-responsive mar"/>
+          <img src='{{asset('public/img/ghaska.png')}}' alt="logo" class="img-responsive mar"/>
            
             <h3 class="text-primary">Register</h3>
             <!-- Notifications -->

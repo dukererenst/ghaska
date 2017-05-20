@@ -15,5 +15,7 @@ use \Illuminate\Database\Eloquent\Model;
  * @author Wins
  */
 class Blogs extends Model{
-    //put your code here
+    
+    public $catgeoryName;
+    public $hasImage;
 }

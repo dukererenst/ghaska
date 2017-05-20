@@ -8,68 +8,55 @@ Contact Us
 <div class="container">
     <!--recently view item-->
     <div class="row">
-        <h2 class="text-primary"> Current Executives</h2>
+        <h3 class="text-primary"> Current Executives</h3>
         <div class="divider"></div>
-        <div class="flip-3d">
+        @foreach($executives as $executive)
+        <div class="flip-3d col-md-3">
             <figure>
-               <img src='{{asset('public/img/ghaska-logo-small.png')}}' alt="product image">
+                <img src='{{asset('public/img/ghaska-logo-small.png')}}' alt="product image" class="img img-responsive">
                 <figcaption>
-                    <h4 class="text-white">Floral Printed Saree</h4>
-                    <ul class="hidden-xs">
-                        <li>Product Type - Women's Saree</li>
-                        <li>Color - Multi Colour</li>
+                    <h3 class="text-white">{{$executive->full_name}}</h3>
+                    <ul class="hidden-xs text-white">
+                        <li>Institution : {{$executive->institution}}</li>
+                        <li>Program : {{$executive->program}}</li>
+                        <li>Email : {{$executive->email_address}}</li>
+                        <li>Phone : {{$executive->telephone}}</li>
                     </ul>
-                    <h4 class="text-white hidden-xs"><del class="text-danger">Rs. 1599.00</del>  Rs. 1198.00   </h4>
+                  
                 </figcaption>
             </figure>
             <div class="text-center mart10">
-                <a href="single_product.html" class="btn btn-primary text-white">View</a></div>
+                <h3>{{$executive->position}}</h3>
+            </div>
         </div>
-        <div class="flip-3d">
+        @endforeach
+
+
+    </div>
+    <div class="row">
+        <h3 class="text-primary"> Regional Executives</h3>
+        <div class="divider"></div>
+        @foreach($regionalReps as $rep)
+        <div class="col-md-3 flip-3d">
             <figure>
-                <img src='{{asset('public/img/ghaska-logo-small.png')}}' alt="product image">
+                <img src='{{asset('public/img/ghaska-logo-small.png')}}' alt="product image" class="img img-responsive">
                 <figcaption>
-                    <h4 class="text-white">Floral Printed Saree</h4>
-                    <ul class="hidden-xs">
-                        <li>Product Type - Women's Saree</li>
-                        <li>Color - Multi Colour</li>
+                    <h3 class="text-white">{{$rep->full_name}}</h3>
+                    <ul class="hidden-xs text-white">
+                        <li>Program : {{$rep->program}}</li>
+                        <li>Email : {{$rep->email_address}}</li>
+                        <li>Phone : {{$rep->telephone}}</li>
                     </ul>
-                    <h4 class="text-white hidden-xs"><del class="text-danger">Rs. 1999.00</del> Rs. 1499.00</h4>
+                  
                 </figcaption>
             </figure>
             <div class="text-center mart10">
-                <a href="single_product.html" class="btn btn-primary text-white">View</a></div>
+                <h3>{{$rep->regionName}}</h3>
+            </div>
         </div>
-        <div class="flip-3d">
-            <figure>
-                <img src='{{asset('public/img/ghaska-logo-small.png')}}' alt="product image">
-                <figcaption>
-                    <h4 class="text-white">Floral Printed Saree</h4>
-                    <ul class="hidden-xs">
-                        <li>Product Type - Women's Saree</li>
-                        <li>Color - Multi Colour</li>
-                    </ul>
-                    <h4 class="text-white hidden-xs"><del class="text-danger">Rs. 1999.00</del> Rs. 1499.00</h4>
-                </figcaption>
-            </figure>
-            <div class="text-center mart10">
-                <a href="single_product.html" class="btn btn-primary text-white">View</a></div>
-        </div>
-        <div class="flip-3d">
-            <figure>
-                <img src='{{asset('public/img/ghaska-logo-small.png')}}' alt="product image">
-                <figcaption>
-                    <h4 class="text-white">Floral Printed Saree</h4>
-                    <ul class="hidden-xs">
-                        <li>Product Type - Women's Saree</li>
-                        <li>Color - Multi Colour</li>
-                    </ul>
-                    <h4 class="text-white hidden-xs"><del class="text-danger">Rs. 1999.00</del> Rs. 1499.00</h4>
-                </figcaption>
-            </figure>
-            <div class="text-center mart10">
-                <a href="single_product.html" class="btn btn-primary text-white">View</a></div>
-        </div>
+        @endforeach
+
+
     </div>
 </div>
 @endsection

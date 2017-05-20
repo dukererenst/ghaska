@@ -3,17 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use \App\AboutUs;
 
-class AboutUsController extends Controller
-{
+class AboutUsController extends Controller {
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
+    public function index() {
+        $aboutUs = AboutUs::find(1);
+        if ($aboutUs != null) {
+            return view('admin.admin_about_us')->with('aboutUs', $aboutUs);
+        } else {
+            return view('admin.admin_about_us')->with('aboutUs', new AboutUs());
+        }
     }
 
     /**
@@ -21,9 +26,13 @@ class AboutUsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    public function create() {
+        $aboutUs = AboutUs::find(1);
+        if ($aboutUs != null) {
+            return view('admin.admin_about_us')->with('aboutUs', $aboutUs);
+        } else {
+            return view('admin.admin_about_us')->with('aboutUs', new AboutUs());
+        }
     }
 
     /**
@@ -32,9 +41,24 @@ class AboutUsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
+    public function store(Request $request) {
+        $aboutUs = new AboutUs();
+        $aboutUs->id = 1;
+        $aboutUs->about_us = $request->about_us;
+        $aboutUs->who_we_are = $request->who_we_are;
+
+        $about_Us = AboutUs::find(1);
+
+        if ($about_Us != null) {
+            $about_Us->about_us = $request->about_us;
+            $about_Us->who_we_are = $request->who_we_are;
+
+            $about_Us->update();
+            return view('admin.admin_about_us')->with('aboutUs', $about_Us);
+        } else {
+            $aboutUs->save();
+            return view('admin.admin_about_us')->with('aboutUs', $aboutUs);
+        }
     }
 
     /**
@@ -43,8 +67,7 @@ class AboutUsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
+    public function show($id) {
         //
     }
 
@@ -54,8 +77,7 @@ class AboutUsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
+    public function edit($id) {
         //
     }
 
@@ -66,8 +88,7 @@ class AboutUsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
+    public function update(Request $request, $id) {
         //
     }
 
@@ -77,8 +98,8 @@ class AboutUsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
+    public function destroy($id) {
         //
     }
+
 }

@@ -42,11 +42,6 @@ class BlogController extends Controller {
         $blog->has_picture = 'NO';
         if ($request->hasFile('feature_image')) {
             Storage::disk('blog_uploads')->put($request->file('feature_image')->getClientOriginalName(), file_get_contents($request->file('feature_image')));
-//            foreach ($request->file('feature_image') as $file) {
-//                Storage::disk('catalog_uploads')->put($file->getClientOriginalName(), file_get_contents($file));
-////                $fileName = $fileName + $file->getClientOriginalName();
-////                $fileName+=',';
-//            }
             $blog->has_picture = 'YES';
         }
 

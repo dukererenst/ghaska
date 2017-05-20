@@ -3,16 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use \App\Blogs;
 
-class PublicBlogController extends Controller
-{
+class PublicBlogController extends Controller {
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index() {
         //
     }
 
@@ -21,8 +21,7 @@ class PublicBlogController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    public function create() {
         //
     }
 
@@ -32,8 +31,7 @@ class PublicBlogController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         //
     }
 
@@ -43,9 +41,21 @@ class PublicBlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
+    public function show($id) {
+        $blog = Blogs::find($id);
+        if ($blog->blog_category_id != null) {
+            $blog->catgeoryName = \App\BlogCategory::find($blog->blog_category_id)->category_name;
+        }
+        if ($blog->feature_image != null) {
+            $blog->hasImage = 'YES';
+        }
+        return view('frontend.blog_detail')
+                ->with('blog', $blog)
+                 ->with('about_active', '')
+                ->with('media_active', 'active')
+                ->with('member_active', '')
+                ->with('contact_active', '')
+                 ->with('home_active', '');
     }
 
     /**
@@ -54,9 +64,21 @@ class PublicBlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
+    public function edit($id) {
+        $blog = Blogs::find($id);
+        if ($blog->blog_category_id != null) {
+            $blog->catgeoryName = \App\BlogCategory::find($blog->blog_category_id)->category_name;
+        }
+        if ($blog->feature_image != null) {
+            $blog->hasImage = 'YES';
+        }
+        return view('frontend.blog_detail')
+                ->with('blog', $blog)
+                 ->with('about_active', '')
+                ->with('media_active', 'active')
+                ->with('member_active', '')
+                ->with('contact_active', '')
+                 ->with('home_active', '');
     }
 
     /**
@@ -66,8 +88,7 @@ class PublicBlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
+    public function update(Request $request, $id) {
         //
     }
 
@@ -77,8 +98,8 @@ class PublicBlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
+    public function destroy($id) {
         //
     }
+
 }

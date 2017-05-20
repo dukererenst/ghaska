@@ -9,17 +9,17 @@
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href='{{route('member_executives')}}'>Executive</a>
                                 </li>
-                                <li><a href="#">Regional Executive</a></li>
+                               
 
                                 <li><a href="#">Members</a></li>
 
                             </ul>
                         </li>
-                        <li class="dropdown {{$member_active}}"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> Media</a>
+                        <li class="dropdown {{$media_active}}"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> Media</a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href='{{route('blogs')}}'>Blog</a>
                                 </li>
-                                <li><a href="#">Gallery</a>
+                                <li><a href='{{route('gallery.index')}}'>Gallery</a>
                                 </li>
                                 <li><a href="#">Video</a>
                                 </li>
@@ -31,8 +31,10 @@
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="#">News</a>
                                 </li>
-                                <li><a href="#">News Item</a>
-                                </li>
+                                <li><a href="#">Seminars</a></li>
+                                <li><a href="#">Conference</a></li>
+                                <li><a href="#">Meetings</a></li>
+                                <li><a href="#">Volunteering</a></li>
                             </ul>
                         </li>
                         <li ><a href="#"> Ghana/Korea Experience</a>

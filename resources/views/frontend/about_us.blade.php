@@ -9,47 +9,12 @@
            
             <div class="col-md-8">
                 <h2><b>Welcome to GHASKA</b></h2>
-                <p>
-                    GHASKA is a non-political and non-profit association, which cooperates with the
-                    Ghanaian Embassy of Korea and serves as an umbrella body for all 
-                    Ghanaian students based in South Korea and associate members 
-                    who have an undying interest in the association.  
-                </p>
-                <p>
-                    The group was started at the proposal of Ms. Rita Udor during 
-                    a post-independence day party on 7th March, 2015 at the residence 
-                    Mr. Peprah Aprantwum. The primary motive was to help build formidable 
-                    networks and provide information for the self-aggrandizement of
-                    Ghanaian students in the Republic of Korea, which was believed would 
-                    advertently translate into the advancement of the socio-economic agenda of Ghana.
-
-                </p>
-                <p>
-                    A three-member team, comprising of Isaac Acquah, Mahama Sumaila and Rita 
-                    Udor, was constituted to temporary oversee the running of 
-                    the association. We held our first meeting in June, 2015 at KAIST, 
-                    Daejeon, to meet members across the country and deliberate on issues 
-                    regarding to the formation of the group and scripting of a
-                    constitution. Our first general meeting was finally held in 
-                    September, 2015 at Hanbat National University, Daejeon. 
-                    At this meeting, an interim executive committee, made up of 
-                    Emmanuel Afranie, Monica Dzatse and Prince Anokye, was appointed. 
-                    The team was put in charge of the operations of the group until a 
-                    formal constitution was ready and an election conducted. On the 17th 
-                    September, 2016, a second annual general meeting was held at Hanyang 
-                    University, Seoul. During this meeting, our constitution was formally
-                    adopted as a working document and an election was also held to elect 
-                    the first executive committee to steer the affairs of the group.
-                </p>
-                 <p>
-                     The group is grateful to the following persons and institution who 
-                     have made diverse contributions to the group, especially during 
-                     its early formative stages: Mr. Peprah Aprantwum, Mr. Edwin Opare, 
-                     the constitution committee (Ms. Kafui Folikumah, Ms. Akuyo Agbenyega,
-                     Mr. Samuel Afoakwa, Mr. Mahama Sumaila, Mr. Patrick Boakye 
-                     and Mr. Samuel Boahen), Mr. John Kofi Adjah and the Embassy of 
-                     Ghana, Republic of Korea.
-                 </p>
+               
+                   
+               <?php 
+               echo $aboutUs->about_us
+               ?>
+               
                 <div class="row">
             <!-- Our Team Heading Start -->
             <div class="text-center">

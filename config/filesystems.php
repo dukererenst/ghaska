@@ -58,5 +58,25 @@ return [
             'driver' => 'local',
             'root' => public_path() . '/blogs/pictures/',
         ],
+        'executive_uploads' => [
+            'driver' => 'local',
+            'root' => public_path() . '/members/executive/',
+        ],
+        'regional_uploads' => [
+            'driver' => 'local',
+            'root' => public_path() . '/members/regional_executive/',
+        ],
+        'general_uploads' => [
+            'driver' => 'local',
+            'root' => public_path() . '/members/general/',
+        ],
+        'gallery_group_uploads' => [
+            'driver' => 'local',
+            'root' => public_path() . '/gallery/',
+        ],
+        'gallery_uploads' => [
+            'driver' => 'local',
+            'root' => public_path() . '/gallery/',
+        ],
     ],
 ];

@@ -19,6 +19,7 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href='{{asset('public/css/frontend/primary-skin.css')}}'/>
         <link rel="stylesheet" type="text/css" href='{{asset('public/css/frontend/jquery.circliful.css')}}'/>
         <link rel="stylesheet" type="text/css" href='{{asset('public/css/frontend/font-awesome.css')}}'/>
+        <link rel="stylesheet" type="text/css" href='{{asset('public/css/frontend/news.css')}}'/>
     </head>
     <body>
         <header >
@@ -50,11 +51,11 @@ and open the template in the editor.
                             <ul class="list-inline icon-position">
                                 <li>
                                     <a href="mailto:"><i class="livicon" data-name="mail" data-size="18" data-loop="true" data-c="#fff" data-hc="#fff"></i></a>
-                                    <label class="hidden-xs"><a href="mailto:" class="text-white">info@joshadmin.com</a></label>
+                                    <label class="hidden-xs"><a href="mailto:" class="text-white">info@ghaska.com</a></label>
                                 </li>
                                 <li>
                                     <a href="tel:"><i class="livicon" data-name="phone" data-size="18" data-loop="true" data-c="#fff" data-hc="#fff"></i></a>
-                                    <label class="hidden-xs"><a href="tel:" class="text-white">(703) 717-4200</a></label>
+                                    <label class="hidden-xs"><a href="tel:" class="text-white">(+82) 10-5853-6439</a></label>
                                 </li>
                             </ul>
                         </li>

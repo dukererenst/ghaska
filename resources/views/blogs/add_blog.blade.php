@@ -12,14 +12,14 @@ Add Blog
               
 
                 <!-- /.col-sm-8 -->
-                <div class="col-sm-4">
+                <div class="col-sm-8">
                     <div class="form-group ">
                         <label class="control-label " for="title">Blog Title</label>
                         <input type="text" id="blog_title" name="blog_title" class="form-control " placeholder="Post title here..." required>
                     </div>
                     <div class="form-group">
                         <label class="control-label " for="title">Blog Content</label>
-                        <textarea  class="form-control" name="blog_content" rows="4" placeholder="Post Content here..." required></textarea>
+                        <textarea  class="form-control editor-cls" name="blog_content" rows="4" placeholder="Post Content here..." required></textarea>
 
 
                     </div>
@@ -40,7 +40,7 @@ Add Blog
                     </div>
                     <div class="form-group">
                         <button class="btn btn-raised btn-success">Save and post</button>
-                        <a href="#" class="btn btn-raised btn-danger">Discard</a>
+                        <a href='{{route('blog.index')}}' class="btn btn-raised btn-danger">Discard</a>
                     </div>
                 </div>
                 <!-- /.col-sm-4 -->

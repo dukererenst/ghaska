@@ -8,27 +8,37 @@
         <div class="content">
 
             <div class="col-md-8">
-                <!-- BEGIN FEATURED POST -->
-                @foreach($blogs as $blog)
-                <div class="featured-post-wide thumbnail">
-                    <img src="uploads/blog/6D948Kf2iI.pdf" class="img-responsive" alt="Image">
-                    <div class="featured-text relative-left">
-                        <h3 class="primary"><a href="blogitem/ateswt.html">ateswt</a></h3>
-                        <p>
-                        <p>{{$blog->blog_title}}</p>
-                        
-                        <p>
-                            <strong>Tags: </strong>
-                            No Tags
-                        </p>
-                       
-                       <div class="text-right primary"><a href="#">Read more</a></div>
-                        
-                    </div>
-                    <!-- /.featured-text -->
-                </div>
+                <div class="row">
+                    @foreach($blogs as $blog)
+                    <div class="col-md-12">
+                        <div class="news-blocks">
+                            @if($blog->hasImage == 'YES')
+                            <img src='{{asset('public/blogs/pictures/'.$blog->feature_image)}}' data-src="holder.js/2000x203/#5bc0de:#fff" class="img img-responsive img-thumbnail" alt="image" 
+                                 style="height: 150px; width: 100%"/>
+                            @endif
+                            <h3>
+                                <a href="#">{{$blog->blog_title}}</a>
+                            </h3>
+                            <strong>{{$blog->catgeoryName}}</strong>
+                            <em>{{$blog->created_at->diffForHumans()}}</em>
+                            <p>
+                                {{ mb_substr(strip_tags(html_entity_decode($blog->blog_content)), '0','400')}}
+                               
+                            </p>
+                            <a href='{{route('blogs.show',$blog->id)}}'>
+                                Read more..
+                                <i class="m-icon-swapright m-icon-black"></i>
+                            </a>
+                        </div>
 
-                @endforeach
+                    </div>
+                    @endforeach
+                </div>
+                <!-- BEGIN FEATURED POST -->
+
+
+
+
             </div>
 
 

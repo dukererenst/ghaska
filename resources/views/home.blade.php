@@ -87,12 +87,17 @@
                     <h4 class="border-warning"><span class="heading_border bg-warning">What We Are</span></h4>
                 </div>
             </div>
-            <img src="assets/images/image_12.jpg" alt="image_12" class="img-responsive">
+            
             <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+               <p>
+                <?php
+                echo substr($aboutUs->who_we_are,0,400)
+                ?>
+                   ...
+            </p>
             </p>
             <p>
-            <div class="text-right primary"><a href="#">Read more</a></div>
+            <div class="text-right primary"><a href='{{route('about_us')}}'>Read more</a></div>
             </p>
         </div>
         <!-- //What we are End -->
@@ -103,12 +108,15 @@
                     <h4 class="border-success"><span class="heading_border bg-success">About Us</span></h4>
                 </div>
             </div>
-            <img src="assets/images/image_11.jpg" alt="image_11" class="img-responsive">
+           
             <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                <?php
+                echo substr($aboutUs->about_us,0,350)
+                ?>
+                ...
             </p>
             <p>
-            <div class="text-right primary"><a href="#">Read more</a>
+            <div class="text-right primary"><a href='{{route('about_us')}}'>Read more</a>
             </div>
             </p>
         </div>
@@ -132,9 +140,9 @@
             <div>
                 <p>
                     <label>
-                      {{ mb_substr(strip_tags(html_entity_decode($blog->blog_content)), '0','300')}}
+                        {{ mb_substr(strip_tags(html_entity_decode($blog->blog_content)), '0','300')}}
                     </label>
-                <div class="text-right primary"><a href="#">Read more</a></div>
+                <div class="text-right primary"> <a href='{{route('blogs.show',$blog->id)}}'>Read more</a></div>
                 </p>
 
             </div>
